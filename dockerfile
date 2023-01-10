@@ -1,4 +1,4 @@
-FROM python:3.10-alpine3.16
+FROM python:3.9-alpine3.16
 LABEL maintainer=""
 
 ENV PYTHONUNBUFFERED 1
@@ -9,7 +9,7 @@ COPY ./app /app
 WORKDIR /app
 EXPOSE 8000
 
-ARG DEV=False
+ARG DEV=false
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
