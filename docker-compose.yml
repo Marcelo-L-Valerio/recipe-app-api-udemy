@@ -1,4 +1,4 @@
-version: "3.10"
+version: "3.9"
 
 services:
   app:
@@ -28,7 +28,7 @@ services:
       - dev-db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=devdb
-      - POSTGRES_USAR=devuser
+      - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=changeme
 
 
