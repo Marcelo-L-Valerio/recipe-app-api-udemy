@@ -10,7 +10,11 @@ def health_check(request):
     '''Returns sucessful response'''
     return Response({'healthy': True})
 
+
 @api_view(['GET'])
 def home_page(request):
     '''Returns an spceific phrase'''
-    return Response({'pipoquinha, princesa da putaria': 'https://www.youtube.com/watch?v=zAmHQk-OW3k'})
+    return Response(
+        {'pipoquinha, princesa da putaria':
+            'https://www.youtube.com/watch?v=zAmHQk-OW3k'}
+    )
